@@ -1,0 +1,76 @@
+# ── Python ────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+env/
+.env
+.venv
+
+# ── Large data files (host externally — see README) ────────────────────
+# 3D Tiles building model (~487 MB)
+frontend/buildings_3dtiles/
+
+# SUMO road network files (generate with setup_sumo_enugu.bat)
+data/sumo/enugu.net.xml
+data/sumo/enugu.osm
+data/sumo/enugu.rou.xml
+data/sumo/enugu_bus.rou.xml
+data/sumo/trips.trips.xml
+data/sumo/netconvert_log.txt
+data/sumo/randomtrips_log.txt
+
+# Generated flood risk data (regenerate with flood_analysis.py)
+data/flood_risk_results/
+data/raw/
+data/processed/
+
+# ── Logs and temp files ───────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.swp
+*~
+
+# ── OS files ──────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ── IDE / Editor ──────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ── API keys (never commit these) ─────────────────────────────────────
+.env
+config.local.js
+secrets.py
+
+# ── Node (not used but just in case) ──────────────────────────────────
+node_modules/
+npm-debug.log*
+
+# ── Test outputs ──────────────────────────────────────────────────────
+*.geojson.bak
+hand.tif
+hand_debug.tif
+slope.tif
+drainage.tif
