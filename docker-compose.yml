@@ -1,0 +1,17 @@
+services:
+  database:
+    image: postgis/postgis:15-3.4
+    container_name: enugu_routing_db
+    environment:
+      POSTGRES_DB: enugu_routing
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: c1h1u1k1s1
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/init_db.sql:/docker-entrypoint-initdb.d/init.sql
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
